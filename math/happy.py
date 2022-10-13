@@ -15,7 +15,7 @@ def isHappy(n):
         """
         cycle = set()
         while True:
-            n = self.sum_sq_dig(n)
+            n = sum_sq_dig(n)
             if n == 1:
                 return True
             else:
