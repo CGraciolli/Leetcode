@@ -1,3 +1,14 @@
+##https://leetcode.com/problems/validate-binary-search-tree/
+
+from typing import Optional
+
+
+class TreeNode:
+    def __init__(self, val=0, left=None, right=None):
+        self.val = val
+        self.right = right
+        self.left = left
+
 def inorder(node):
     """
     assumes node is not None
@@ -28,7 +39,9 @@ def inorderTraversal(root):
         inorder_list = new_inorder_list
     return inorder_list
 
-def isValidBST(self, root) -> bool:
+        
+class Solution:
+    def isValidBST(self, root: Optional[TreeNode]) -> bool:
         inorder = inorderTraversal(root)
         index = 0
         while index < len(inorder) - 1:
