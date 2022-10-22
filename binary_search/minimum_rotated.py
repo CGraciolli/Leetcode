@@ -1,6 +1,9 @@
 ##https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/
 
-def findMin(nums:list[int]) -> int:
+from typing import List
+
+
+def findMin(nums:List[int]) -> int:
         """
         :type nums: List[int]
         :rtype: int

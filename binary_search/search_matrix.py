@@ -1,6 +1,9 @@
 ##https://leetcode.com/problems/search-a-2d-matrix/
 
-def binarySearch(nums:list[int], target:int) -> int:
+from typing import List
+
+
+def binarySearch(nums:List[int], target:int) -> int:
         M = len(nums) -1
         m = 0
         if target > nums[M]:
@@ -23,7 +26,7 @@ def binarySearch(nums:list[int], target:int) -> int:
                     m += 1
         return False
 
-def searchInsert(nums: list[int], target: int) -> int:
+def searchInsert(nums: List[int], target: int) -> int:
         m = 0
         M = len(nums) - 1
         if target > nums[-1]:
@@ -46,7 +49,8 @@ def searchInsert(nums: list[int], target: int) -> int:
                     M -= 1
         return m, False
 
-def searchMatrix(matrix: list[list[int]], target: int) -> bool:
+class Solution:
+    def searchMatrix(self, matrix: List[List[int]], target: int) -> bool:
         ##frist we use searchInsert to determine the right row
         firsts = []
         for row in matrix:

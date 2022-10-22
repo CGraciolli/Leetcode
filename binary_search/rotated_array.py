@@ -1,6 +1,9 @@
 ##https://leetcode.com/problems/search-in-rotated-sorted-array/
 
-def binarySearch(nums:list[int], target:int) -> int:
+from typing import List
+
+
+def binarySearch(nums:List[int], target:int) -> int:
         M = len(nums) -1
         m = 0
         if target > nums[M]:
@@ -23,7 +26,7 @@ def binarySearch(nums:list[int], target:int) -> int:
                     m += 1
         return -1
 
-def search(nums: list[int], target: int) -> int:
+def search(nums: List[int], target: int) -> int:
     ##if the list has only one number
     if len(nums) == 1:
         return nums[0] == target

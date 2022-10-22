@@ -1,6 +1,7 @@
 ##https://leetcode.com/problems/spiral-matrix/
 
 from functools import reduce
+from typing import List
 
 def is_matrix_empty(matrix):
     """
@@ -49,9 +50,10 @@ def spiral_outter_layer(matrix):
             matrix[i] = matrix[i][1:len(matrix[i])-1]
     return spiral, matrix
 
-def spiralOrder(matrix):
+class Solution:
+    def spiralOrder(self, matrix: List[List[int]]) -> List[int]:
         spiral = []
-        while matrix != [[]]:
+        while not is_matrix_empty(matrix):
             new_spiral, matrix = spiral_outter_layer(matrix)
             spiral += new_spiral
         return spiral

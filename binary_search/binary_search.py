@@ -1,7 +1,11 @@
 ##https://leetcode.com/problems/binary-search/
 
 
-def search(nums: list[int], target: int) -> int:
+from typing import List
+
+
+class Solution:
+    def search(self, nums: List[int], target: int) -> int:
         M = len(nums) -1
         m = 0
         if target > nums[M]:

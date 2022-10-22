@@ -1,5 +1,7 @@
 ##https://leetcode.com/problems/squares-of-a-sorted-array/
-##Given an integer array nums sorted in non-decreasing order, return an array of the squares of each number sorted in non-decreasing order.
+
+from typing import List
+
 
 def searchInsert(nums, target):
         m = 0
@@ -24,7 +26,8 @@ def searchInsert(nums, target):
                     M -= 1
         return (m, nums[m] == target)
 
-def sortedSquares(nums: list[int]) -> list[int]:
+class Solution:
+    def sortedSquares(self, nums: List[int]) -> List[int]:
         index, is_zero = searchInsert(nums, 0)
         sorted_squares = []
         if is_zero == True:

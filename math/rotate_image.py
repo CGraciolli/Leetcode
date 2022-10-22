@@ -1,5 +1,8 @@
 ##https://leetcode.com/problems/rotate-image/
 
+from typing import List
+
+
 def transpose(matrix):
     """
     transposes a matrix
@@ -16,6 +19,10 @@ def mirror_y(matrix):
         row.reverse()
 
 
-def transpose(matrix):
-    transpose(matrix)
-    mirror_y(matrix)
+class Solution:
+    def rotate(self, matrix: List[List[int]]) -> None:
+        """
+        Do not return anything, modify matrix in-place instead.
+        """
+        transpose(matrix)
+        mirror_y(matrix)
